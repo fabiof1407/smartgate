@@ -1,5 +1,5 @@
 # Rodar o projeto
 
-# Git clone
-# npm install 
-# npm start
+- Git clone
+- npm install 
+- npm start
