@@ -1,5 +1,7 @@
-import React, {  useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import * as fp from 'fingerpose'
+import Header from '../../componets/header'
+import Footer from '../../componets/footer'
 
 const FingerPoseApp = () => {
   const videoRef = useRef(null)
@@ -64,12 +66,18 @@ const FingerPoseApp = () => {
   }, [])
 
   return (
-    <div>
-      <video
-        ref={videoRef}
-        style={{ transform: 'scaleX(-1)', display: 'none' }}
-      ></video>
-    </div>
-  )}
+    <>
+      <Header/>
+      <div>
+        <video
+          ref={videoRef}
+          style={{ transform: 'scaleX(-1)', display: 'none' }}>
+        </video>
+      </div>
+      <Footer/>
+    </>
 
-  export default FingerPoseApp
+  )
+}
+
+export default FingerPoseApp
